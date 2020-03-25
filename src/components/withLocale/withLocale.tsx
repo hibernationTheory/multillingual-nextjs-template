@@ -2,8 +2,8 @@ import React from "react";
 import { getDisplayName } from "next/dist/next-server/lib/utils";
 import Error from "next/error";
 
-import { LocaleProvider } from "../components";
-import { isLocale } from "../utilities/translations";
+import { LocaleProvider } from "src/components";
+import { isLocale } from "src/utilities/translations";
 
 export default WrappedPage => {
   const WithLocale = ({ locale, ...pageProps }) => {

@@ -1,6 +1,5 @@
 import React from "react";
-import { Layout } from "../../components/Layout";
-import withLocale from "../../hocs/withLocale";
+import { Layout, withLocale } from "src/components";
 
 const IndexPage: React.FC = () => {
   return <Layout titleKey="notAPipe">Hello World</Layout>;

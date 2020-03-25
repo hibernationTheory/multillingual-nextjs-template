@@ -4,7 +4,7 @@ import {
   locales,
   languageNames,
   useTranslation
-} from "../../utilities/translations";
+} from "src/utilities/translations";
 
 export const LocaleSwitcher = () => {
   const router = useRouter();
