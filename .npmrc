@@ -1,0 +1,1 @@
+npm set registry https://registry.npmjs.org/
