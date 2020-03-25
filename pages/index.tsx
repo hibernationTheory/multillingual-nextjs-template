@@ -1,30 +1,22 @@
-import Link from "next/link";
-import fetch from "isomorphic-unfetch";
+import React from "react";
+import Head from "next/head";
+import { useRouter } from "next/dist/client/router";
 
-const Index = props => (
-  <>
-    <h1>Batman TV Shows</h1>
-    <ul>
-      {props.shows.map(show => (
-        <li key={show.id}>
-          <Link href="/p/[id]" as={`/p/${show.name}`}>
-            <a>{show.name}</a>
-          </Link>
-        </li>
-      ))}
-    </ul>
-  </>
-);
+import { getInitialLocale } from "../utilities/translations";
 
-Index.getInitialProps = async function() {
-  const res = await fetch("https://api.tvmaze.com/search/shows?q=batman");
-  const data = await res.json();
+const Index = () => {
+  const router = useRouter();
 
-  console.log(`Show data fetched. Count: ${data.length}`);
+  // useEffect only runs on the client-side.
+  React.useEffect(() => {
+    router.replace("/[lang]", `/${getInitialLocale()}`);
+  });
 
-  return {
-    shows: data.map(entry => entry.show)
-  };
+  return (
+    <Head>
+      <meta name="robots" content="noindex, nofollow" />
+    </Head>
+  );
 };
 
 export default Index;
