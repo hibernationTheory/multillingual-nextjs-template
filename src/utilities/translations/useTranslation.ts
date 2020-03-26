@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { LocaleContext } from "./context";
-import translations from "../translations/strings";
-import { defaultLocale } from "../translations/config";
+import translations from "./translations";
+import { defaultLocale } from "./config";
 
 export function useTranslation() {
   const { locale } = useContext(LocaleContext);
@@ -16,6 +16,6 @@ export function useTranslation() {
 
   return {
     translate,
-    locale
+    locale,
   };
 }

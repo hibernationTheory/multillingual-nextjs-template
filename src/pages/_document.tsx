@@ -13,6 +13,10 @@ export default class MyDocument extends Document {
             rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
           />
+          <link
+            href="https://fonts.googleapis.com/css?family=Muli:400,400i,700,700i,800,800i&display=swap"
+            rel="stylesheet"
+          />
         </Head>
         <body>
           <Main />

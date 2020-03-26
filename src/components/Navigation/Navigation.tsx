@@ -8,6 +8,8 @@ import Link from "next/link";
 import { useTranslation } from "src/utilities/translations";
 import { LocaleSwitcher } from "../LocaleSwitcher";
 
+import { Nav, NavItem, NavLink, ToolbarContainer } from "./components";
+
 export const Navigation = () => {
   const { locale, translate } = useTranslation();
 
@@ -15,19 +17,16 @@ export const Navigation = () => {
     <>
       <AppBar>
         <Toolbar>
-          <ul className="root">
-            <li>
-              <Link href="/[lang]" as={`/${locale}`}>
-                <a>{translate("painting")}</a>
-              </Link>
-            </li>
-            <li>
-              <Link href="/[lang]/artist" as={`/${locale}/artist`}>
-                <a>{translate("artist")}</a>
-              </Link>
-            </li>
-          </ul>
-          <LocaleSwitcher />
+          <ToolbarContainer>
+            <Nav>
+              <NavItem>
+                <Link href="/[lang]/about" as={`/${locale}/about`}>
+                  <NavLink>{translate("about")}</NavLink>
+                </Link>
+              </NavItem>
+            </Nav>
+            <LocaleSwitcher />
+          </ToolbarContainer>
         </Toolbar>
       </AppBar>
       {/* This is to not have part of the page hidden behind the appbar */}

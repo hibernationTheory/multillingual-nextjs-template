@@ -5,8 +5,7 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider as StyledComponentsThemeProvider } from "styled-components";
 import { ThemeProvider as MaterialUIThemeProvider } from "@material-ui/core/styles";
 
-import { theme as styledComponentsTheme } from "src/styles/styledComponentsTheme";
-import { theme as materialUITheme } from "src/styles/materialUITheme";
+import { materialUITheme, styledComponentsTheme } from "src/styles/theme";
 
 export default class MyApp extends App {
   componentDidMount() {
