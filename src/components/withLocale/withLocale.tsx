@@ -1,6 +1,6 @@
 import React from "react";
-import { getDisplayName } from "next/dist/next-server/lib/utils";
 import Error from "next/error";
+import { getDisplayName } from "next/dist/next-server/lib/utils";
 
 import { LocaleProvider } from "src/components";
 import { isLocale } from "src/utilities/translations";

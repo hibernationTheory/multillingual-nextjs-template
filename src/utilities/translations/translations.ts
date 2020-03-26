@@ -1,19 +1,19 @@
 const translations = {
   en: {
-    about: "About Page",
-    helloWorld: "Hello World!",
+    "root.aboutPage": "About Page",
+    "root.helloWorld": "Hello World!",
   },
   fr: {
-    about: "À Propos",
-    helloWorld: "Bonjour le monde!",
+    "root.aboutPage": "À Propos",
+    "root.helloWorld": "Bonjour le monde!",
   },
   pl: {
-    about: "O Stronie",
-    helloWorld: "Witaj świecie!",
+    "root.aboutPage": "O Stronie",
+    "root.helloWorld": "Witaj świecie!",
   },
   tr: {
-    about: "Hakkında",
-    helloWorld: "Merhaba Dünya!",
+    "root.aboutPage": "Hakkında",
+    "root.helloWorld": "Merhaba Dünya!",
   },
 };
 

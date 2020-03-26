@@ -21,7 +21,7 @@ export const Navigation = () => {
             <Nav>
               <NavItem>
                 <Link href="/[lang]/about" as={`/${locale}/about`}>
-                  <NavLink>{translate("about")}</NavLink>
+                  <NavLink>{translate("root.aboutPage")}</NavLink>
                 </Link>
               </NavItem>
             </Nav>

@@ -1,17 +1,18 @@
 import React from "react";
 import Head from "next/head";
-import { useTranslation } from "src/utilities/translations";
 import { Navigation } from "../Navigation";
+import { TranslationsProvider } from "../TranslationsProvider";
 
-export const Layout = ({ titleKey, children }) => {
-  const { translate } = useTranslation();
+export const Layout = ({ title, children }) => {
   return (
     <>
       <Head>
-        <title>{translate(titleKey)}</title>
+        <title>{title}</title>
       </Head>
       <Navigation />
-      <>{children}</>
+      <TranslationsProvider>
+        <>{children}</>
+      </TranslationsProvider>
     </>
   );
 };

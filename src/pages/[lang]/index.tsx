@@ -18,9 +18,9 @@ const IndexPage = () => {
   const { translate } = useTranslation();
 
   return (
-    <Layout titleKey="helloWorld">
+    <Layout title={translate("root.helloWorld")}>
       <TitleContainer>
-        <Title>{translate("helloWorld")}</Title>
+        <Title>{translate("root.helloWorld")}</Title>
       </TitleContainer>
     </Layout>
   );
