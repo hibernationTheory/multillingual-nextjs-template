@@ -11,8 +11,7 @@ const TitleContainer = styled.section`
 `;
 
 const Title = styled.h1`
-  font-size: 50px;
-  color: ${({ theme }) => theme.colors.primary};
+  font-size: ${({ theme }) => theme.typography.h1};
 `;
 
 const IndexPage = () => {
