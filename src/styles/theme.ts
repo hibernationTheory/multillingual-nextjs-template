@@ -20,7 +20,7 @@ const customTheme = merge({}, defaultMuiTheme, {
   },
 });
 
-console.log(customTheme);
+// console.log(customTheme);
 
 export const materialUITheme = createMuiTheme(customTheme);
 export const styledComponentsTheme = customTheme;
