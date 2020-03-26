@@ -12,22 +12,26 @@ export const Navigation = () => {
   const { locale, translate } = useTranslation();
 
   return (
-    <AppBar>
-      <Toolbar>
-        <ul className="root">
-          <li>
-            <Link href="/[lang]" as={`/${locale}`}>
-              <a>{translate("painting")}</a>
-            </Link>
-          </li>
-          <li>
-            <Link href="/[lang]/artist" as={`/${locale}/artist`}>
-              <a>{translate("artist")}</a>
-            </Link>
-          </li>
-        </ul>
-        <LocaleSwitcher />
-      </Toolbar>
-    </AppBar>
+    <>
+      <AppBar>
+        <Toolbar>
+          <ul className="root">
+            <li>
+              <Link href="/[lang]" as={`/${locale}`}>
+                <a>{translate("painting")}</a>
+              </Link>
+            </li>
+            <li>
+              <Link href="/[lang]/artist" as={`/${locale}/artist`}>
+                <a>{translate("artist")}</a>
+              </Link>
+            </li>
+          </ul>
+          <LocaleSwitcher />
+        </Toolbar>
+      </AppBar>
+      {/* This is to not have part of the page hidden behind the appbar */}
+      <Toolbar />
+    </>
   );
 };

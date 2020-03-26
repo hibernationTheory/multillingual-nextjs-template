@@ -1,14 +1,17 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
+import styled from "styled-components";
 
 import { Layout, withLocale } from "src/components";
+
+const Title = styled.h1`
+  font-size: 50px;
+  color: ${({ theme }) => theme.colors.primary};
+`;
 
 const IndexPage: React.FC = () => {
   return (
     <Layout titleKey="notAPipe">
-      <Typography variant="h2" component="h1">
-        Hello World
-      </Typography>
+      <Title>Hello World</Title>
     </Layout>
   );
 };

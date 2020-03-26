@@ -1,9 +1,11 @@
 import React from "react";
 import App from "next/app";
 import Head from "next/head";
-import { ThemeProvider as MaterialUIThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
+import { ThemeProvider as StyledComponentsThemeProvider } from "styled-components";
+import { ThemeProvider as MaterialUIThemeProvider } from "@material-ui/core/styles";
 
+import { theme as styledComponentsTheme } from "src/styles/styledComponentsTheme";
 import { theme as materialUITheme } from "src/styles/materialUITheme";
 
 export default class MyApp extends App {
@@ -27,9 +29,11 @@ export default class MyApp extends App {
           />
         </Head>
         <MaterialUIThemeProvider theme={materialUITheme}>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-          <CssBaseline />
-          <Component {...pageProps} />
+          <StyledComponentsThemeProvider theme={styledComponentsTheme}>
+            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+            <CssBaseline />
+            <Component {...pageProps} />
+          </StyledComponentsThemeProvider>
         </MaterialUIThemeProvider>
       </>
     );

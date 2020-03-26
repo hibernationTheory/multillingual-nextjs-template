@@ -10,3 +10,15 @@ I will be missing out on some neat features that comes with these libraries such
 
 This medium article provides a pretty comprehensive walkthrough of that:
 https://medium.com/swlh/how-to-build-a-multilingual-website-in-next-js-2924eeb462bc
+
+## Use Material-UI for ready-made components.
+
+Date: 26/03/2020
+
+It is useful to make use of a component library to quickly utilize ready-made solutions instead of reinventing the wheel yourself. Material-UI is a good choice here since it has a lot of customizable components, it is themable and SSR compatible.
+
+## Use Styled Components instead of Styled-JSX
+
+Data: 26/30/2020
+
+This is a bit of a personal choice but I prefer `styled-components` over `styled-jsx` because it is easily themable, easier to override child classes with if you needed to, has a larger community and better documentation.
