@@ -1,16 +1,30 @@
 import React from "react";
-import { useRouter } from "next/dist/client/router";
+import { makeStyles } from "@material-ui/core/styles";
+import MenuItem from "@material-ui/core/MenuItem";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+
+import { useRouter } from "next/router";
+
 import {
   locales,
   languageNames,
-  useTranslation
+  useTranslation,
 } from "src/utilities/translations";
 
+const useStyles = makeStyles(theme => ({
+  formControl: {
+    margin: theme.spacing(1),
+    minWidth: 120,
+  },
+}));
+
 export const LocaleSwitcher = () => {
+  const classes = useStyles();
   const router = useRouter();
   const { locale } = useTranslation();
 
-  const handleLocaleChange = React.useCallback(
+  const handleChange = React.useCallback(
     e => {
       const regex = new RegExp(`^/(${locales.join("|")})`);
       router.push(
@@ -22,12 +36,14 @@ export const LocaleSwitcher = () => {
   );
 
   return (
-    <select value={locale} onChange={handleLocaleChange}>
-      {locales.map(locale => (
-        <option key={locale} value={locale}>
-          {languageNames[locale]}
-        </option>
-      ))}
-    </select>
+    <FormControl className={classes.formControl}>
+      <Select value={locale} onChange={handleChange} displayEmpty>
+        {locales.map(locale => (
+          <MenuItem key={locale} value={locale}>
+            {languageNames[locale]}
+          </MenuItem>
+        ))}
+      </Select>
+    </FormControl>
   );
 };
