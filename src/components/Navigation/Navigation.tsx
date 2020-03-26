@@ -30,7 +30,7 @@ export const Navigation = () => {
         </Toolbar>
       </AppBar>
       {/* This is to not have part of the page hidden behind the appbar */}
-      <Toolbar />
+      {/* <Toolbar /> */}
     </>
   );
 };

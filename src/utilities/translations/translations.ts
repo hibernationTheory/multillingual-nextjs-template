@@ -1,4 +1,8 @@
 const translations = {
+  de: {
+    "root.aboutPage": "Über",
+    "root.helloWorld": "Hallo Welt!",
+  },
   en: {
     "root.aboutPage": "About Page",
     "root.helloWorld": "Hello World!",
