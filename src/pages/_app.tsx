@@ -27,6 +27,9 @@ export default class MyApp extends App {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width"
           />
+          <meta charSet="utf-8" />
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta property="og:type" content="website" />
         </Head>
         <TranslationsProvider>
           <MaterialUIThemeProvider theme={materialUITheme}>

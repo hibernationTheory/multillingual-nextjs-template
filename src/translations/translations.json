@@ -1,27 +1,32 @@
 {
   "fr": {
     "root.helloWorld": "Bonjour le monde!",
-    "slides.title": "Comment créer un magasin «Achetez en ligne, ramassage au bord de la rue»",
+    "meta.siteTitle": "Modèle Next.js multilingue | Créez des applications pour toutes les langues",
+    "meta.description": "Modèle Next.js facile à utiliser, multilingue, optimisé pour le référencement, prêt pour la SSR, stylable",
     "root.aboutPage": "À Propos"
   },
   "en": {
     "root.helloWorld": "Hello World!",
-    "slides.title": "How to Build a \"Buy Online, Pickup Curbside\" store ",
+    "meta.siteTitle": "Multilingual Next.js Template | Build apps for every language",
+    "meta.description": "Easy to use, multilingual, SEO-optimized, SSR-ready, stylable Next.js template",
     "root.aboutPage": "About Us"
   },
   "de": {
     "root.helloWorld": "Hallo Welt!",
-    "slides.title": "So bauen Sie einen \"Online kaufen, Pickup Curbside\" -Laden auf",
+    "meta.siteTitle": "Mehrsprachige Next.js-Vorlage | Erstellen Sie Apps für jede Sprache",
+    "meta.description": "Einfach zu bedienende, mehrsprachige, SEO-optimierte, SSR-fähige, stilbare Next.js-Vorlage",
     "root.aboutPage": "Über"
   },
   "tr": {
     "root.helloWorld": "Merhaba Dünya!",
-    "slides.title": "\"Çevrimiçi Satın Al, Kamyonet Kaldırım Kenarı\" mağazası nasıl kurulur",
+    "meta.siteTitle": "Çok Dilde Next.js Şablonu | Her dil için uygulama oluşturun",
+    "meta.description": "Kullanımı kolay, çok dilli, SEO için optimize edilmiş, SSR'ye hazır, stilize edilebilir Next.js şablonu",
     "root.aboutPage": "Hakkında"
   },
   "pl": {
     "root.helloWorld": "Witaj świecie!",
-    "slides.title": "Jak zbudować sklep „Kup online, Pickup Curbside”",
+    "meta.siteTitle": "Modèle Next.js multilingue | Créez des applications pour toutes les langues",
+    "meta.description": "Łatwy w użyciu, wielojęzyczny, zoptymalizowany pod kątem SEO, gotowy do SSR, nadający się do rysowania szablon Next.js\n",
     "root.aboutPage": "O Stronie"
   }
 }
