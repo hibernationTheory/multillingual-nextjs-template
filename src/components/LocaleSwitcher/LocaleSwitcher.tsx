@@ -12,12 +12,17 @@ import {
   useTranslation,
 } from "src/utilities/translations";
 
-const useStyles = makeStyles(theme => ({
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-  },
-}));
+const useStyles = makeStyles(theme => {
+  return {
+    formControl: {
+      margin: theme.spacing(1),
+      minWidth: 120,
+    },
+    select: {
+      color: theme.palette.common.white,
+    },
+  };
+});
 
 export const LocaleSwitcher = () => {
   const classes = useStyles();
@@ -37,7 +42,12 @@ export const LocaleSwitcher = () => {
 
   return (
     <FormControl className={classes.formControl}>
-      <Select value={locale} onChange={handleChange} displayEmpty>
+      <Select
+        value={locale}
+        onChange={handleChange}
+        displayEmpty
+        className={classes.select}
+      >
         {locales.map(locale => (
           <MenuItem key={locale} value={locale}>
             {languageNames[locale]}

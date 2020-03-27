@@ -20,6 +20,7 @@ const customTheme = merge({}, defaultMuiTheme, {
   },
 });
 
+// uncomment if you need to see what theme options are available.
 // console.log(customTheme);
 
 export const materialUITheme = createMuiTheme(customTheme);

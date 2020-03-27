@@ -14,8 +14,8 @@ export const NavItem = styled.li`
 `;
 
 export const NavLink = styled.a`
-  color: ${({ theme }) => theme.palette.text.primary};
+  color: ${({ theme }) => theme.palette.common.white};
   cursor: pointer;
-  font-size: ${({ theme }) => theme.typography.fontSize}
+  font-size: ${({ theme }) => theme.typography.h6}
   text-decoration: none;
 `;
