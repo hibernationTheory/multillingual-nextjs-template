@@ -1,0 +1,27 @@
+{
+  "fr": {
+    "root.helloWorld": "Bonjour le monde!",
+    "slides.title": "Comment créer un magasin «Achetez en ligne, ramassage au bord de la rue»",
+    "root.aboutPage": "À Propos"
+  },
+  "en": {
+    "root.helloWorld": "Hello World",
+    "slides.title": "How to Build a \"Buy Online, Pickup Curbside\" store ",
+    "root.aboutPage": "About Us"
+  },
+  "de": {
+    "root.helloWorld": "Hallo Welt!",
+    "slides.title": "So bauen Sie einen \"Online kaufen, Pickup Curbside\" -Laden auf",
+    "root.aboutPage": "Über"
+  },
+  "tr": {
+    "root.helloWorld": "Merhaba Dünya!",
+    "slides.title": "\"Çevrimiçi Satın Al, Kamyonet Kaldırım Kenarı\" mağazası nasıl kurulur",
+    "root.aboutPage": "Hakkında"
+  },
+  "pl": {
+    "root.helloWorld": "Witaj świecie!",
+    "slides.title": "Jak zbudować sklep „Kup online, Pickup Curbside”",
+    "root.aboutPage": "O Stronie"
+  }
+}

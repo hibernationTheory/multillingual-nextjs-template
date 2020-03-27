@@ -3,8 +3,4 @@ module.exports = {
     config.resolve.modules.push(__dirname);
     return config;
   },
-  typescript: {
-    ignoreDevErrors: true,
-    ignoreBuildErrors: true,
-  },
 };
