@@ -4,7 +4,11 @@ const path = require("path");
 
 require("dotenv").config();
 
-const { AIRTABLE_API_KEY, AIRTABLE_BASE_ID } = process.env;
+const { AIRTABLE_API_KEY, AIRTABLE_BASE_ID, AIRTABLE_BASE_NAME } = process.env;
+if (!AIRTABLE_API_KEY || !AIRTABLE_BASE_ID || !AIRTABLE_BASE_NAME) {
+  throw new Error("Missing environment variables");
+}
+
 const base = new Airtable({ apiKey: AIRTABLE_API_KEY }).base(AIRTABLE_BASE_ID);
 
 async function getTranslationsFromAirtableData(records) {
@@ -31,7 +35,7 @@ async function getTranslationsFromAirtableData(records) {
 
 async function downloadTranslations() {
   let data = [];
-  const query = await base("test").select();
+  const query = await base(AIRTABLE_BASE_NAME).select();
 
   await query.eachPage((records, fetchNextPage) => {
     records.forEach(record => {

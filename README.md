@@ -11,6 +11,12 @@ Check it out at: https://multillingual-nextjs-template.now.sh/en
 
 ## Getting started
 
+The template is setup to download translations from airtable. If you don't want to interface with airtable then remove the `npm run download-translations` command from `"dev": "npm run download-translations && next",` in package.json. This way the template won't try to download the translations remotely. You can provide the translations yourself manually by adjusting the `src/translations/translations.json` file.
+
+If you wanted to have a similar airtable setup, then you need to enter your Airtable Api secrets inside the .env file. (just rename the `.env.example` to be `.env` and enter your values there.)
+
+After that, run:
+
 ```
 npm install
 npm run dev
