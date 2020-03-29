@@ -3,15 +3,13 @@ import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 
-import Link from "next/link";
-
 import { useTranslation } from "src/utilities/translations";
 import { LocaleSwitcher } from "../LocaleSwitcher";
 
 import { Nav, NavItem, NavLink, ToolbarContainer } from "./components";
 
 export const Navigation = () => {
-  const { locale, translate } = useTranslation();
+  const { translate } = useTranslation();
 
   return (
     <>
@@ -20,9 +18,13 @@ export const Navigation = () => {
           <ToolbarContainer>
             <Nav>
               <NavItem>
-                <Link href="/[lang]/about" as={`/${locale}/about`}>
-                  <NavLink>{translate("root.aboutPage")}</NavLink>
-                </Link>
+                <NavLink
+                  href={
+                    "https://github.com/hibernationTheory/multillingual-nextjs-template"
+                  }
+                >
+                  {translate("root.aboutPage")}
+                </NavLink>
               </NavItem>
             </Nav>
             <LocaleSwitcher />

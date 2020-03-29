@@ -9,6 +9,7 @@ const TitleContainer = styled.section`
   justify-content: center;
   align-items: center;
   height: 100vh;
+  flex-direction: column;
 `;
 
 const Title = styled.h1`
@@ -17,11 +18,17 @@ const Title = styled.h1`
 
 const IndexPage = () => {
   const { translate } = useTranslation();
+  const mainTitle = `#${translate("root.stayAtHome")
+    .split(" ")
+    .map(item => {
+      return item.toLowerCase();
+    })
+    .join("")}`;
 
   return (
-    <Layout title={translate("root.helloWorld")}>
+    <Layout title={translate("root.stayAtHome")}>
       <TitleContainer>
-        <Title>{translate("root.helloWorld")}</Title>
+        <Title>{mainTitle}</Title>
       </TitleContainer>
     </Layout>
   );
