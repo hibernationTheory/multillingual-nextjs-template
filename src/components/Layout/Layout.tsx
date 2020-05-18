@@ -1,13 +1,11 @@
 import React from "react";
 import Head from "next/head";
 
-import { useTranslation } from "src/utilities/translations";
 import { Navigation } from "../Navigation";
 
 export const Layout = ({ title, children }) => {
-  const { translate } = useTranslation();
-  const siteTitle = translate("meta.siteTitle");
-  const description = translate("meta.description");
+  const siteTitle = 'Site Title';
+  const description = 'Description';
 
   return (
     <>

@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run download-translations && next",
+    "dev": "next",
     "build": "next build",
     "export": "next export",
-    "start": "next start",
-    "download-translations": "node src/translations/downloadTranslations"
+    "start": "next start"
   },
   "author": "Engin Arslan",
   "license": "ISC",
@@ -17,7 +16,7 @@
     "airtable": "^0.8.1",
     "isomorphic-unfetch": "^3.0.0",
     "lodash": "^4.17.15",
-    "next": "^9.3.1",
+    "next": "^9.3.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "styled-components": "^5.0.1"

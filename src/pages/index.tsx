@@ -1,22 +1,28 @@
 import React from "react";
-import Head from "next/head";
-import { useRouter } from "next/router";
+import styled from "styled-components";
 
-import { getInitialLocale } from "../utilities/translations";
+import { Layout } from "src/components";
 
-const Index = () => {
-  const router = useRouter();
+const TitleContainer = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+`;
 
-  // useEffect only runs on the client-side.
-  React.useEffect(() => {
-    router.replace("/[lang]", `/${getInitialLocale()}`);
-  });
+const Title = styled.h1`
+  font-size: ${({ theme }) => theme.typography.h1};
+`;
 
+const IndexPage = () => {
   return (
-    <Head>
-      <meta name="robots" content="noindex, nofollow" />
-    </Head>
+    <Layout title={'hello world'}>
+      <TitleContainer>
+        <Title>{' hello world '}</Title>
+      </TitleContainer>
+    </Layout>
   );
 };
 
-export default Index;
+export default IndexPage

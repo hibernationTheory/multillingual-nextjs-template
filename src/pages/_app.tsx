@@ -6,7 +6,6 @@ import { ThemeProvider as MaterialUIThemeProvider } from "@material-ui/core/styl
 import { ThemeProvider as StyledComponentsThemeProvider } from "styled-components";
 
 import { materialUITheme, styledComponentsTheme } from "src/styles/theme";
-import { TranslationsProvider } from "src/components";
 
 export default class MyApp extends App {
   componentDidMount() {
@@ -31,15 +30,13 @@ export default class MyApp extends App {
           <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
           <meta property="og:type" content="website" />
         </Head>
-        <TranslationsProvider>
-          <MaterialUIThemeProvider theme={materialUITheme}>
-            <StyledComponentsThemeProvider theme={styledComponentsTheme}>
-              {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-              <CssBaseline />
-              <Component {...pageProps} />
-            </StyledComponentsThemeProvider>
-          </MaterialUIThemeProvider>
-        </TranslationsProvider>
+        <MaterialUIThemeProvider theme={materialUITheme}>
+          <StyledComponentsThemeProvider theme={styledComponentsTheme}>
+            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+            <CssBaseline />
+            <Component {...pageProps} />
+          </StyledComponentsThemeProvider>
+        </MaterialUIThemeProvider>
       </>
     );
   }
