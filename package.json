@@ -4,11 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm run download-translations && next",
+    "dev": "next",
     "build": "next build",
     "export": "next export",
-    "start": "next start",
-    "download-translations": "node src/translations/downloadTranslations"
+    "start": "next start"
   },
   "author": "Engin Arslan",
   "license": "ISC",
